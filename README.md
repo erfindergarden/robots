@@ -6,6 +6,8 @@ Hier findest du die Worksheets und den Programmcode vom [CamJam EduKit 3](http:/
 ### Aufbau
 In den PDFs im Ordner `worksheets` sind Aufbau des Roboters und Programmierung der Funktionen 'line following' und 'obstacle avoidance' dokumentiert.
 
+Test
+
 ### Fernsteuerung mit Blynk
 Hier findest du eine Anleitung, wie du den Roboter mit Blynk fernsteuern kannst: [blynk/README.md](blynk/README.md)
 

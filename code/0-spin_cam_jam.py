@@ -11,6 +11,13 @@ GPIO.setwarnings(False)
 
 # Set variables for the GPIO motor pins
 # das sind deine Pins beim Cam Jam Edu Board
+# Setze die Variablen für die Motorpins
+# das sind deine Pins beim Cam Jam Edu Board
+# beim Ryanteck Board sind sie 17, 18 und 22 und 23
+# beim RaspiRobot Board sind sie 17, 14 und 10 und 25
+# beim Explorer Hat Pro sind sie 19, 20 und 21, 26
+
+# wenn du ein anderes Board hast ales das Cam Jam Board schreibe deine Pins rein
 
 
 pinMotorAForwards = 10

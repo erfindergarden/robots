@@ -20,12 +20,11 @@ GPIO.setwarnings(False)
 
 # wenn du ein anderes Board hast ales das Cam Jam Board schreibe deine Pins rein
 
-# das sind jetzt die pins fuer das raspirobotboard
 
-pinMotorAForwards = 17
-pinMotorABackwards = 14
-pinMotorBForwards = 10
-pinMotorBBackwards = 25
+pinMotorAForwards = 10
+pinMotorABackwards = 9
+pinMotorBForwards = 8
+pinMotorBBackwards = 7
 
 # Set the GPIO Pin mode
 GPIO.setup(pinMotorAForwards, GPIO.OUT)

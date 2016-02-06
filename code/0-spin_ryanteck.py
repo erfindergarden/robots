@@ -16,15 +16,15 @@ GPIO.setwarnings(False)
 # das sind deine Pins beim Cam Jam Edu Board
 # beim Ryanteck Board sind sie 17, 18 und 22 und 23
 # beim RaspiRobot Board sind sie 17, 14 und 10 und 25
-# beim Explorer Hat Pro sind sie 
+# beim Explorer Hat Pro sind sie 19, 20 und 21, 26
 
 # wenn du ein anderes Board hast ales das Cam Jam Board schreibe deine Pins rein
+# das sind jetzt die Pins fuer das ryanteck board
 
-
-pinMotorAForwards = 10
-pinMotorABackwards = 9
-pinMotorBForwards = 8
-pinMotorBBackwards = 7
+pinMotorAForwards = 17
+pinMotorABackwards = 18
+pinMotorBForwards = 22
+pinMotorBBackwards = 23
 
 # Set the GPIO Pin mode
 GPIO.setup(pinMotorAForwards, GPIO.OUT)

@@ -1,20 +1,20 @@
 # Pi Roboter Workshop
 Hier findest du die Worksheets und den Programmcode vom [CamJam EduKit 3](http://camjam.me/?page_id=1035). 
 
-Sollte das Cam Jam Kit ausverkauft sein verwenden wir auch ein Motor Board und ein Lasercut Chassis von Ryantek. Eine Anleitung für den Zusammenbau findest [hier] (http://wiki.ryanteck.uk/RTK-000-003-Robot-Assembly). Der einzige Unterschied ist, dass die Motoren mit unterschiedlichen Pins angesteuert werden. Python Code Examples findest du [hier] (https://github.com/RyanteckLTD/RTK-000-003/blob/master/basicPython/codeSamples/pythonBasis.py)
+Sollte das Cam Jam Kit ausverkauft sein verwenden wir auch ein Motor Board und ein Lasercut Chassis von Ryantek. Eine Anleitung für den Zusammenbau findest [hier] (http://wiki.ryanteck.uk/RTK-000-003-Robot-Assembly). Der einzige Unterschied ist, dass die Motoren mit unterschiedlichen Pins angesteuert werden. Python Code Examples findest du [hier] (https://github.com/RyanteckLTD/RTK-000-003/blob/master/basicPython/codeSamples/pythonBasis.py).
 
-Solltest due ein RaspiRobotBoard V2 oder V3 von Simon Monk haben dann findest du den code [hier] (https://github.com/simonmonk/raspirobotboard2/tree/master/python/examples) und die Anleitung zum Zusammenbau hier.
+Solltest du ein RaspiRobotBoard V2 oder V3 von Simon Monk haben dann findest du den code [hier] (https://github.com/simonmonk/raspirobotboard2/tree/master/python/examples) und die Anleitung zum Zusammenbau hier.
 
 ## Kursinhalt
 ### Aufbau und Motortest
-In den PDFs im Ordner `worksheets` ist der Zusammenbau des Robots und der Motortest beschrieben. Da wir als Distribution Kano verwenden haben wir das erste Worksheet auf Deutsch neu geschrieben. 
+In den PDFs im Ordner `worksheets` ist der Zusammenbau des Robots und der Motortest beschrieben. Da wir als Distribution Kano verwenden, haben wir das erste Worksheet auf Deutsch neu geschrieben. 
 
 ###Autostart python Programm
 
-Inhalt des Kurses ist es ein python programm automatisch nach dem booten deines pis zu starten, damit du deinen Pi erst mit einem Bildschirm programmiern kannst und ihn dann mit Akku fahren zu lassen. Eine Anleitung findest du in `worksheets` .
+Inhalt des Kurses ist es ein python programm automatisch nach dem booten deines pis zu starten, damit du deinen Pi erst mit einem Bildschirm programmiern kannst und ihn dann mit Akku fahren lassen kannst. Eine Anleitung findest du in `worksheets` .
 
 ###Programmierung mit Scratch
-Nach dem wir das python sript geschrieben haben, werden wir das Programm in scratch nach bauen. 
+Nachdem wir das Python Sript geschrieben haben, werden wir das Programm in Scratch nachbauen. 
 
 
 ##Extras

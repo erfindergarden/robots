@@ -1,17 +1,80 @@
 # Pi Roboter Workshop
 Hier findest du die Worksheets und den Programmcode vom [CamJam EduKit 3](http://camjam.me/?page_id=1035). 
 
-Sollte das Cam Jam Kit ausverkauft sein verwenden wir auch ein Motor Board und ein Lasercut Chassis von Ryantek. Eine Anleitung für den Zusammenbau findest [hier] (http://wiki.ryanteck.uk/RTK-000-003-Robot-Assembly). Der einzige Unterschied ist, dass die Motoren mit unterschiedlichen Pins angesteuert werden. Python Code Examples findest du [hier] (https://github.com/RyanteckLTD/RTK-000-003/blob/master/basicPython/codeSamples/pythonBasis.py).
+Sollte das Cam Jam Kit ausverkauft sein verwenden wir auch ein Motor Board und ein Lasercut Chassis von Ryanteck. Eine Anleitung für den Zusammenbau findest [hier] (http://wiki.ryanteck.uk/RTK-000-003-Robot-Assembly). Der einzige Unterschied ist, dass die Motoren mit anderen Pins angesteuert werden. Python Code Examples findest du [hier] (https://github.com/RyanteckLTD/RTK-000-003/blob/master/basicPython/codeSamples/pythonBasis.py). Unter `code` findest du code examples für jedes Board. 
 
 Solltest du ein RaspiRobotBoard V2 oder V3 von Simon Monk haben dann findest du den code [hier] (https://github.com/simonmonk/raspirobotboard2/tree/master/python/examples) und die Anleitung zum Zusammenbau hier.
+
+
 
 ## Kursinhalt
 ### Aufbau und Motortest
 In den PDFs im Ordner `worksheets` ist der Zusammenbau des Robots und der Motortest beschrieben. Da wir als Distribution Kano verwenden, haben wir das erste Worksheet auf Deutsch neu geschrieben. 
 
-###Autostart python Programm
+### Einführung in GPIO Zero
 
-Inhalt des Kurses ist es ein python programm automatisch nach dem booten deines pis zu starten, damit du deinen Pi erst mit einem Bildschirm programmiern kannst und ihn dann mit Akku fahren lassen kannst. Eine Anleitung findest du in `worksheets` .
+Um dir den Einstieg in die Roboterprogrammierung zu vereinfachen verwenden wir die [pizero library](https://gpiozero.readthedocs.org/en/v1.1.0/). 
+
+
+#### Installation 
+
+Mit diesen Kommandos kannst du pizero installieren. 
+
+```
+sudo apt-get install python-dev
+
+```
+
+``` 
+sudo pip install gpiozero
+
+```
+
+### Kontrollieren des CamJam #3 Kit Robot mit pizero
+
+Mittlerweile gibt es eine eigene Klasse für den CamJam Robot. Du musst so gar nicht mehr die Pins definieren. So kannst du etwa deinen Roboter Links fahren. 
+
+```
+from gpiozero import CamJamKitRobot
+
+robot = CamJamKitRobot()
+robot.left()
+
+```
+Folgende Kommandos stehen dir zur Verfügung:  
+
+
+> `backward(speed=1)`
+
+Fahre den Roboter rückwärts indem du beide Motoren rückwarts drehen läßt.
+ 
+>  close()
+
+Shut down the device and release all associated resources.
+ 
+> forward(speed=1)
+
+Fahre vorwärts indem du beide Motoren vorwärts drehen läßt. 
+ 
+>  left(speed=1)
+
+Fahre eine enge Links Kurve indem du den rechten Motor vorwärts drehen läßt und den linken Motor rückwärts drehen läßt. 
+ 
+>  reverse()
+
+Reverse the robot’s current motor directions. If the robot is currently running full speed forward, it will run full speed backward. If the robot is turning left at half-speed, it will turn right at half-speed. If the robot is currently stopped it will remain stoppe
+ 
+>  right(speed=1)
+
+Fahre eine enge rechts Kurve indem du den linken Motor vorwärts und den rechten Motor rückwärts fahren läßt. 
+ 
+>  stop() 
+ 
+Stoppe alle Motoren. 
+
+### Autostart python Programm
+
+Inhalt des Kurses ist es ein Python Programm automatisch nach dem booten deines pis zu starten, damit du deinen Pi erst mit einem Bildschirm programmiern kannst und ihn dann mit Akku fahren lassen kannst. Eine Anleitung findest du in `worksheets` .
 
 ###Programmierung mit Scratch
 Nachdem wir das Python Sript geschrieben haben, werden wir das Programm in Scratch nachbauen. 
@@ -37,7 +100,7 @@ Eine englische Anleitung findest du dazu `worksheets`
 Hier findest du eine Anleitung, wie du den Roboter mit dem iphone/Android Blynk fernsteuern kannst: [blynk/README.md](blynk/README.md)
 
 ### eigenes Chassis
-In einem weiteren Workshop werden wir zusammen ein Chasis designen und 3D Drucken. Ein Beispiel findest du hier auf thingiverse. 
+In einem weiteren Workshop werden wir zusammen ein Chasis designen und 3D Drucken. Ein Beispiel findest du hier auf [thingiverse](http://www.thingiverse.com/thing:1113796/#files). 
 
 ## Download 
 * den ganzen order über "Download ZIP" rechts oben

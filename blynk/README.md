@@ -43,14 +43,15 @@ sudo ./blynk --token=AUTH-TOKEN
 ### 3. Interface designen in Blynk
 
 1. Erstelle ein Interface mit vier Buttons: Für jedes Rad zwei Buttons, einen für vorwärts, einen für rückwärts.
-2. Weise jedem Button den entsprechenen GPIO Pin zu:
-	* Links vorwärts: gp8
-	* Links rückwärts: gp7
-	* Rechts vorwärts: gp10
-	* Rechts rückwärts: gp9
+2. Weise jedem Button den entsprechenen GPIO Pin nach der unten stehenden Tabelle zu
 3. Stelle den 'Mode'-Schalter für jeden Button auf 'push'
 4. Drücke rechts oben den "Play"-Button
 5. Jetzt kannst du mit zwei Fingern deinen Roboter steuern
 
+| Board | Links vorwärts | Links rückwärts | Rechts vorwärts | Rechts rückwärts |
+|-------|----------------|-----------------|-----------------|------------------------|
+| CamJam EduKit 3|gp8|gp7|gp10|gp9|
+| Ryanteck RPi Motor Controller | gp18 | gp17 | gp23 | gp22 |
+
+
 ![Screenshot 1](screenshot-1.png)
-![Screenshot 2](screenshot-2.png)

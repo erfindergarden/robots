@@ -11,10 +11,9 @@ Solltest du ein RaspiRobotBoard V2 oder V3 von Simon Monk haben dann findest du 
 ### Aufbau und Motortest
 In den PDFs im Ordner `worksheets` ist der Zusammenbau des Robots und der Motortest beschrieben. Da wir als Distribution Kano verwenden, haben wir das erste Worksheet auf Deutsch neu geschrieben. 
 
-<<<<<<< HEAD
 ### Einführung in GPIO Zero
 
-Um dir den Einstieg in die Roboterprogrammierung zu vereinfachen verwenden wir die [pizero library](https://gpiozero.readthedocs.org/en/v1.1.0/). 
+Um dir den Einstieg in die Roboterprogrammierung zu vereinfachen verwenden wir die [gpiozero library](https://gpiozero.readthedocs.org/en/v1.1.0/). 
 
 
 #### Installation 
@@ -33,7 +32,7 @@ sudo pip install gpiozero
 
 ### Kontrollieren des CamJam #3 Kit Robot mit pizero
 
-Mittlerweile gibt es eine eigene Klasse für den CamJam Robot. Du musst so gar nicht mehr die Pins definieren. So kannst du etwa deinen Roboter Links fahren. 
+Mittlerweile gibt es eine eigene Klasse für den CamJam Robot. Du musst so gar nicht mehr die Pins definieren. So kannst du etwa deinen Roboter Links fahren lassen.
 
 ```
 from gpiozero import CamJamKitRobot
@@ -73,13 +72,9 @@ Fahre eine enge rechts Kurve indem du den linken Motor vorwärts und den rechten
  
 Stoppe alle Motoren. 
 
-### Autostart python Programm
 
-Inhalt des Kurses ist es ein Python Programm automatisch nach dem booten deines pis zu starten, damit du deinen Pi erst mit einem Bildschirm programmiern kannst und ihn dann mit Akku fahren lassen kannst. Eine Anleitung findest du in `worksheets` .
-=======
 ### Autostart Python Programm
 Wie Du dein Programm automatisch beim Hochfahren des Raspberrys starten kannst, steht in [dieser Anleitung](Autostart.md).
->>>>>>> 7a800d22ea544d162ea3430d44d340d4a988113a
 
 ###Programmierung mit Scratch
 Nachdem wir das Python Sript geschrieben haben, werden wir das Programm in Scratch nachbauen. 

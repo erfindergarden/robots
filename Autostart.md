@@ -38,7 +38,7 @@ Wir legen für unser Programm eine soche Datei an. Speichere den folgenden Inhal
 ```bash
 #!/bin/sh
 ### BEGIN INIT INFO
-# Provides:
+# Provides:			 robot
 # Required-Start:    
 # Required-Stop:     
 # Default-Start:     2 3 4 5
@@ -50,11 +50,11 @@ Wir legen für unser Programm eine soche Datei an. Speichere den folgenden Inhal
 case "$1" in
     start)
         # Befehl zum Starten unseres Scripts
-        python /home/pi/robot.py
+        python /home/pi/robot.py &
         ;;
     stop)
         # (Optional) Befehl zum Stoppen unseres Scripts
-        killall python # Achtung! Beendet alle Python-Programme!
+        killall python & # Achtung! Beendet alle Python-Programme!
         ;;
     restart)
         # (Optional) Befehl zum Neustarten

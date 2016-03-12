@@ -9,9 +9,8 @@ Solltest du ein RaspiRobotBoard V2 oder V3 von Simon Monk haben dann findest du 
 ### Aufbau und Motortest
 In den PDFs im Ordner `worksheets` ist der Zusammenbau des Robots und der Motortest beschrieben. Da wir als Distribution Kano verwenden, haben wir das erste Worksheet auf Deutsch neu geschrieben. 
 
-###Autostart python Programm
-
-Inhalt des Kurses ist es ein python programm automatisch nach dem booten deines pis zu starten, damit du deinen Pi erst mit einem Bildschirm programmiern kannst und ihn dann mit Akku fahren lassen kannst. Eine Anleitung findest du in `worksheets` .
+### Autostart Python Programm
+Wie Du dein Programm automatisch beim Hochfahren des Raspberrys starten kannst, steht in [dieser Anleitung](Autostart.md).
 
 ###Programmierung mit Scratch
 Nachdem wir das Python Sript geschrieben haben, werden wir das Programm in Scratch nachbauen. 

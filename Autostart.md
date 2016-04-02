@@ -73,4 +73,10 @@ sudo chmod +x /etc/init.d/robot  # ausführbar machen
 sudo update-rc.d robot defaults  # automatischen start aktivieren
 ```
 
+Um den Autostart des Scripts wieder zu deaktivieren, gib den folgenden Befehl ein:
+
+```bash
+sudo update-rc.d robot disable  # autostart deaktivieren
+```
+
 

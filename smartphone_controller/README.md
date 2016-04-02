@@ -16,6 +16,17 @@
 Die ganze Anleitung findest du auch hier: [https://github.com/blynkkk/blynk-library/blob/master/linux/README.md](https://github.com/blynkkk/blynk-library/blob/master/linux/README.md)
 
 #### A. Voraussetzung: WiringPi installieren
+
+Update: bevor du WiringPi installierst solltest du noch folgende Commands ausführen.
+
+```
+sudo apt-get install make
+sudo apt-get install build-essential
+
+```
+
+Dann kannst du WiringPi installieren.
+
 ```bash
 sudo apt-get install git-core
 git clone git://git.drogon.net/wiringPi
@@ -26,7 +37,9 @@ cd ..
 Die ausführliche Anleitung gibt's auch nochmal hier: [http://wiringpi.com/download-and-install/](http://wiringpi.com/download-and-install/)
 
 #### B. Blynk kompilieren
+
 ```bash
+cd ..
 git clone https://github.com/blynkkk/blynk-library.git
 cd blynk-library/linux
 make clean all target=raspberry
@@ -42,9 +55,9 @@ sudo ./blynk --token=AUTH-TOKEN
 
 ### 3. Interface designen in Blynk
 
-1. Erstelle ein Interface mit vier Buttons: Für jedes Rad zwei Buttons, einen für vorwärts, einen für rückwärts.
-2. Weise jedem Button den entsprechenen GPIO Pin nach der unten stehenden Tabelle zu
-3. Stelle den 'Mode'-Schalter für jeden Button auf 'push'
+1. Erstelle ein Interface mit vier Buttons und bennene sie LV, LH, RV, RH: Für jedes Rad zwei Buttons, einen für vorwärts, einen für rückwärts.
+2. Weise jedem Button den entsprechenen digital GPIO Pin nach der unten stehenden Tabelle zu
+3. Lass den 'Mode'-Schalter für jeden Button auf 'push'
 4. Drücke rechts oben den "Play"-Button
 5. Jetzt kannst du mit zwei Fingern deinen Roboter steuern
 
@@ -52,6 +65,16 @@ sudo ./blynk --token=AUTH-TOKEN
 |-------|----------------|-----------------|-----------------|------------------------|
 | CamJam EduKit 3|gp8|gp7|gp10|gp9|
 | Ryanteck RPi Motor Controller | gp18 | gp17 | gp23 | gp22 |
+| Explorer Hat Pro | gp19 | gp20 | gp21 | gp26 |
+
+
 
 
 ![Screenshot 1](screenshot-1.png)
+
+### 4. Teste ob deine Räder richtig rum fahren, wenn nicht vertausche einfach die Buttons
+
+
+### 5. Autostart blynk script
+
+Mache dein blynk script autorun mit [dieser Anleitung](https://github.com/erfindergarden/Roboter-Workshop/blob/master/Autostart.md).

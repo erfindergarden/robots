@@ -1,6 +1,7 @@
 # Pi Roboter Workshop
 
 [![Join the chat at https://gitter.im/erfindergarden/Roboter-Workshop](https://badges.gitter.im/erfindergarden/Roboter-Workshop.svg)](https://gitter.im/erfindergarden/Roboter-Workshop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Hier findest du die Worksheets und den Programmcode vom [CamJam EduKit 3](http://camjam.me/?page_id=1035). 
 
 Sollte das Cam Jam Kit ausverkauft sein verwenden wir auch ein Motor Board und ein Lasercut Chassis von Ryanteck. Eine Anleitung für den Zusammenbau findest [hier] (http://wiki.ryanteck.uk/RTK-000-003-Robot-Assembly). Der einzige Unterschied ist, dass die Motoren mit anderen Pins angesteuert werden. Python Code Examples findest du [hier] (https://github.com/RyanteckLTD/RTK-000-003/blob/master/basicPython/codeSamples/pythonBasis.py). Unter `code` findest du code examples für jedes Board. 

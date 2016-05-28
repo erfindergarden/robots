@@ -12,7 +12,7 @@ Solltest du ein RaspiRobotBoard V2 oder V3 von Simon Monk haben dann findest du 
 
 ## Kursinhalt
 ### Aufbau und Motortest
-In den PDFs im Ordner `worksheets` ist der Zusammenbau des Robots und der Motortest beschrieben. Da wir als Distribution Kano verwenden, haben wir das erste Worksheet auf Deutsch neu geschrieben. 
+In den PDFs im Ordner `worksheets` ist der Zusammenbau des Roboters und der Motortest beschrieben. Da wir als Distribution Kano verwenden, haben wir das erste Worksheet auf Deutsch neu geschrieben. 
 
 ### Einführung in GPIO Zero
 
@@ -21,7 +21,7 @@ Um dir den Einstieg in die Roboterprogrammierung zu vereinfachen verwenden wir d
 
 #### Installation 
 
-Mit diesen Kommandos kannst du pizero installieren. 
+Mit diesen Kommandos kannst du pizero installieren. Ab Kano 3.0 ist gpio zero bereits vorinstalliert.
 
 ```
 sudo apt-get install python-dev
@@ -33,9 +33,9 @@ sudo pip install gpiozero
 
 ```
 
-### Kontrollieren des CamJam #3 Kit Robot mit pizero
+### Kontrollieren des CamJam #3 Kit Robot mit gpio zero
 
-Mittlerweile gibt es eine eigene Klasse für den CamJam Robot. Du musst so gar nicht mehr die Pins definieren. So kannst du etwa deinen Roboter Links fahren lassen.
+Mittlerweile gibt es eine eigene Klasse für den CamJam Robot. Du musst so gar nicht mehr die Pins definieren. So kannst du etwa deinen Roboter Links fahren lassen. Öffne ein neues Program in geany und speichere es als .py Datei ab.
 
 ```
 from gpiozero import CamJamKitRobot
@@ -47,7 +47,7 @@ robot.left()
 Folgende Kommandos stehen dir zur Verfügung:  
 
 
-> `backward(speed=1)`
+> `robot.backward(speed=1)`
 
 Fahre den Roboter rückwärts indem du beide Motoren rückwarts drehen läßt.
  
@@ -55,23 +55,23 @@ Fahre den Roboter rückwärts indem du beide Motoren rückwarts drehen läßt.
 
 Shut down the device and release all associated resources.
  
-> forward(speed=1)
+> robot.forward(speed=1)
 
 Fahre vorwärts indem du beide Motoren vorwärts drehen läßt. 
  
->  left(speed=1)
+>  robot.left(speed=1)
 
 Fahre eine enge Links Kurve indem du den rechten Motor vorwärts drehen läßt und den linken Motor rückwärts drehen läßt. 
  
->  reverse()
+>  robot.reverse()
 
 Reverse the robot’s current motor directions. If the robot is currently running full speed forward, it will run full speed backward. If the robot is turning left at half-speed, it will turn right at half-speed. If the robot is currently stopped it will remain stoppe
  
->  right(speed=1)
+>  robot.right(speed=1)
 
 Fahre eine enge rechts Kurve indem du den linken Motor vorwärts und den rechten Motor rückwärts fahren läßt. 
  
->  stop() 
+>  robot.stop() 
  
 Stoppe alle Motoren. 
 
@@ -109,6 +109,7 @@ In einem weiteren Workshop werden wir zusammen ein Chasis designen und 3D Drucke
 * den ganzen order über "Download ZIP" rechts oben
 * Oder klicke auf RAW und copy paste den code in deinen geany editor, achte darauf, dass du alle Identications mitnimmst
 * Oder direkt über git, ein gutes Tutorial dazu findest du hier: [try.github.io](https://try.github.io)
+* ```git clone https://github.com/erfindergarden/Roboter-Workshop.git``` in deinem Terminal eingeben
 
 ##LIZENZ
 Dieses Repository ist unter der Creative Commons Lizenz [CC-BY-SA] (http://creativecommons.org/licenses/by-sa/4.0/) lizensiert. 

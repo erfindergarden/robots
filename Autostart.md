@@ -20,11 +20,23 @@ sudo crontab -e
 
 ### Zeile einfügen
 
-Dann fügen wir am Ende eine Zeile an:
+Dann fügen wir am Ende eine Zeile an. Das bedeutet, blynk erst eine Minute nach dem reboot gestartet wird. 
+
+insert
+
+```
+i
+```
 
 ```cron
-@reboot /usr/bin/python /home/pi/robot.py
+@reboot sleep 1 && /home/deinbenutzermame/blynk-library/linux/blynk --token=XXXXXXXXXXXXX
 ```
+
+und schließe und speichere. 
+
+````
+:wq
+````
 
 
 ## Methode 2: init.d

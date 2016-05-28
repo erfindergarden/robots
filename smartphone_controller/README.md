@@ -7,11 +7,11 @@
 2. Registrieren / Anmelden
 3. "Create New Project"
 4. Bei "Hardware Model" **Raspberry Pi 2/A+/B+** auswählen
-4. *Auth-Token* notieren für später
+4. *Auth-Token* notieren für später oder schicke dir eine E-mail mit dem *Auth-Token*
 
 
 ### 2. Blynk auf dem RasPi einrichten
-**Der RasPi muss zur Installation und zum Betrieb mit Blynk mit dem Internet verbunden sein!**
+**Der RasPi muss zur Installation von Blynk und zur Steuerung des Roboters mit dem Internet verbunden sein!**
 
 Die ganze Anleitung findest du auch hier: [https://github.com/blynkkk/blynk-library/blob/master/linux/README.md](https://github.com/blynkkk/blynk-library/blob/master/linux/README.md)
 
@@ -28,7 +28,6 @@ sudo apt-get install build-essential
 Dann kannst du WiringPi installieren.
 
 ```bash
-sudo apt-get install git-core
 git clone git://git.drogon.net/wiringPi
 cd wiringPi
 ./build
@@ -46,7 +45,7 @@ make clean all target=raspberry
 ```
 
 #### C. Blynk starten
-Hier muss der vorher generierte *Auth-Token* eingesetzt werden:
+Hier muss der vorher generierte *Auth-Token* eingesetzt werden, achte darauf, dass du dich nicht 
 
 ```bash
 sudo ./blynk --token=AUTH-TOKEN
@@ -55,7 +54,7 @@ sudo ./blynk --token=AUTH-TOKEN
 
 ### 3. Interface designen in Blynk
 
-1. Erstelle ein Interface mit vier Buttons und bennene sie LV, LH, RV, RH: Für jedes Rad zwei Buttons, einen für vorwärts, einen für rückwärts.
+1. Erstelle ein Interface mit vier Buttons und benenne sie LV, LH, RV, RH: Für jedes Rad zwei Buttons, einen für vorwärts, einen für rückwärts.
 2. Weise jedem Button den entsprechenen digital GPIO Pin nach der unten stehenden Tabelle zu
 3. Lass den 'Mode'-Schalter für jeden Button auf 'push'
 4. Drücke rechts oben den "Play"-Button

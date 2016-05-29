@@ -1,4 +1,4 @@
-# Pi Roboter Workshop
+# Pi Roboter Workshop Berlin
 
 [![Join the chat at https://gitter.im/erfindergarden/Roboter-Workshop](https://badges.gitter.im/erfindergarden/Roboter-Workshop.svg)](https://gitter.im/erfindergarden/Roboter-Workshop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 

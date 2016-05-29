@@ -22,20 +22,29 @@ sudo crontab -e
 
 Dann fügen wir am Ende eine Zeile an. Das bedeutet, blynk erst eine Minute nach dem reboot gestartet wird. 
 
-insert
+insert code mit  ... 
 
 ```
 i
 ```
 
+für den Handycontroller ... 
+
 ```cron
 @reboot sleep 1 && /home/deinbenutzermame/blynk-library/linux/blynk --token=XXXXXXXXXXXXX
 ```
 
+oder für ein anderes Porgramm ... 
+
+```cron
+@reboot python /home/Roboter-WorkShop/deinprogramm.py
+```
+
+
 und schließe und speichere. 
 
 ````
-:wq
+:wq!
 ````
 
 

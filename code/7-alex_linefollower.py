@@ -9,10 +9,10 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 # Set variables for the GPIO motor pins
 # changed by Alex for the Ryanteck Board
-pinMotorAForwards = 18
-pinMotorABackwards = 17
-pinMotorBForwards = 23
-pinMotorBBackwards = 22
+pinMotorAForwards = 10
+pinMotorABackwards = 9
+pinMotorBForwards = 8
+pinMotorBBackwards = 7
 
 
 # Set variables for the line detector GPIO pin

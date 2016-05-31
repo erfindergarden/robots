@@ -48,7 +48,20 @@ und schließe und speichere.
 ````
 
 
-## Methode 2: init.d
+## Methode 2: rc.local
+
+Editiere rc.local
+
+```
+sudo nano  /etc/rc.local
+```
+
+```
+python /home/usr/deinprogramm.py &
+```
+
+
+## Methode 3: init.d
 
 Die typische Methode, wie ein Linux-System Dienste beim Systemstart startet, geht über *init-Scripte*. Das sind Scripts, die im Ordner `/etc/init.d/` abgelegt sind und auf verschiendene Kommandos hören, z.B. `start` oder `stop`.
 

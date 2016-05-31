@@ -1,4 +1,4 @@
-# Pi Roboter Workshop Berlin
+# Pi Roboter Workshop
 
 [![Join the chat at https://gitter.im/erfindergarden/Roboter-Workshop](https://badges.gitter.im/erfindergarden/Roboter-Workshop.svg)](https://gitter.im/erfindergarden/Roboter-Workshop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -11,12 +11,27 @@ Solltest du ein RaspiRobotBoard V2 oder V3 von Simon Monk haben dann findest du 
 
 
 ## Kursinhalt
+
+### Github und Repo clonen
+
+Mache dir einen github account und clone dieses Repository. 
+
+```
+git clone https://github.com/erfindergarden/Roboter-Workshop.git
+
+```
+
 ### Aufbau und Motortest
 In den PDFs im Ordner `worksheets` ist der Zusammenbau des Roboters und der Motortest beschrieben. Da wir als Distribution Kano verwenden, haben wir das erste Worksheet auf Deutsch neu geschrieben. 
 
+### Ultraschall und Line Follower
+
+Erst zeigen wir dir den Code ohne GPIO Zero.
+
+
 ### Einführung in GPIO Zero
 
-Um dir den Einstieg in die Roboterprogrammierung zu vereinfachen verwenden wir die [gpiozero library](https://gpiozero.readthedocs.org/en/v1.1.0/). 
+Um dir den Einstieg in die Roboterprogrammierung zu vereinfachen gibt es die [gpiozero library](https://gpiozero.readthedocs.org/en/v1.1.0/). 
 
 
 #### Installation 
@@ -33,7 +48,7 @@ sudo pip install gpiozero
 
 ```
 
-### Kontrollieren des CamJam #3 Kit Robot mit gpio zero
+#### Kontrollieren des CamJam #3 Kit Robot mit gpio zero
 
 Mittlerweile gibt es eine eigene Klasse für den CamJam Robot. Du musst so gar nicht mehr die Pins definieren. So kannst du etwa deinen Roboter Links fahren lassen. Öffne ein neues Program in geany und speichere es als .py Datei ab.
 
@@ -79,8 +94,9 @@ Stoppe alle Motoren.
 ### Autostart Python Programm
 Wie Du dein Programm automatisch beim Hochfahren des Raspberrys starten kannst, steht in [dieser Anleitung](Autostart.md).
 
+
 ###Programmierung mit Scratch
-Nachdem wir das Python Sript geschrieben haben, werden wir das Programm in Scratch nachbauen. 
+Nachdem wir das Python Sript geschrieben hast kannst du auch probieren die Programme in Scratch nachzubauen. 
 
 
 ##Extras

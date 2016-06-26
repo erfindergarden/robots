@@ -10,8 +10,8 @@ cd $(dirname $0)
 
 for i in [0-9]*.{py,sh}; do
 	if [ -e $i ] && [ ${i##*.} == 'py' ]; then
-		python "$i" &
+		python "$i" > $i.log &
 	elif [ -e $i ] && [ ${i##*.} == 'sh' ]; then
-		./$i &
+		./$i > $i.log &
 	fi
 done

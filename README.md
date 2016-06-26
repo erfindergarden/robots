@@ -92,7 +92,7 @@ Stoppe alle Motoren.
 
 
 ### Autostart Python Programm
-Wie Du dein Programm automatisch beim Hochfahren des Raspberrys starten kannst, steht in [dieser Anleitung](Autostart.md).
+Wie Du dein Programm automatisch beim Hochfahren des Raspberrys starten kannst, steht in [dieser Anleitung](autostart/).
 
 
 ###Programmierung mit Scratch

@@ -92,7 +92,7 @@ Stoppe alle Motoren.
 
 
 ### Autostart Python Programm
-Wie Du dein Programm automatisch beim Hochfahren des Raspberrys starten kannst, steht in [dieser Anleitung](Autostart.md).
+Wie Du dein Programm automatisch beim Hochfahren des Raspberrys starten kannst, steht in [dieser Anleitung](autorun/).
 
 
 ###Programmierung mit Scratch
@@ -116,7 +116,7 @@ Eine englische Anleitung findest du dazu `worksheets`
 .
 
 ### Fernsteuerung mit Blynk
-Hier findest du eine Anleitung, wie du den Roboter mit dem iphone/Android Blynk fernsteuern kannst: [blynk/README.md](blynk/README.md)
+Hier findest du eine Anleitung, wie du den Roboter mit dem iphone/Android Blynk fernsteuern kannst: [smartphone_controller/README.md](smartphone_controller/)
 
 ### eigenes Chassis
 In einem weiteren Workshop werden wir zusammen ein Chasis designen und 3D Drucken. Ein Beispiel findest du hier auf [thingiverse](http://www.thingiverse.com/thing:1113796/#files). 

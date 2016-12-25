@@ -127,8 +127,9 @@ In einem weiteren Workshop werden wir zusammen ein Chasis designen und 3D Drucke
 * Oder direkt über git, ein gutes Tutorial dazu findest du hier: [try.github.io](https://try.github.io)
 * ```git clone https://github.com/erfindergarden/Roboter-Workshop.git``` in deinem Terminal eingeben
 
-##LIZENZ
-Dieses Repository ist unter der Creative Commons Lizenz [CC-BY-SA] (http://creativecommons.org/licenses/by-sa/4.0/) lizensiert. 
+##Lizenz
+
+Insofern nicht anders vermerkt alles in diesem Repository ist unter der Creative Commons Lizenz [CC-BY-SA 4.0] (http://creativecommons.org/licenses/by-sa/4.0/) lizensiert. 
 
 
 ## Kontakt

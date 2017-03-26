@@ -13,5 +13,5 @@ import gpiozero
 sensor = gpiozero.DistanceSensor(18, 17)	# Unser Sensor ist an den Pins 17 und 18 angeschlossen
 
 while True:  # Wiederhole den folgenden Codeblock unendlich
-	print "Abstand vor dem Sensor: %d cm\n" % sensor.distance*100
+	print "Abstand vor dem Sensor: %f m\n" % sensor.distance*100
 	time.sleep(1)  # Warte eine Sekunde vor der nächsten Ausgabe

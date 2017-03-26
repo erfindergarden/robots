@@ -14,7 +14,7 @@ import time					# Hiermit können wir den Ablauf unseres Programms pausieren.
 							# Das wird später benötigt um zu bestimmen, wie
 							# lange die Motoren laufen sollen.
 
-robot = gpiozero.Robot(left = (8, 7), right = (10, 9))	# Hier sagen wir gpiozero an welche Pins
+robot = gpiozero.Robot(left = (9, 10), right = (7, 8))	# Hier sagen wir gpiozero an welche Pins
 														# unsere Motoren angeschlossen sind
 
 robot.forward()				# gpiozero stellt nun im Hintergrund die Pins 8 und 10 auf 1

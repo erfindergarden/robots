@@ -5,7 +5,7 @@ robot = gpiozero.CamJamKitRobot()
 sensor = gpiozero.DistanceSensor(18, 17)
 
 speed = 0.2
-min_distance = 25 # cm
+min_distance = 0.25 # m
 
 def avoid():
 	print("Avoiding obstacle.")

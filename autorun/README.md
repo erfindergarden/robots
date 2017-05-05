@@ -12,6 +12,8 @@ Kopiere diesen gesamten Ordner (`autorun`) in dein Home-Verzeichnis (`/home/<ben
 
 ## 2. rc.local updaten
 
+*Falls das Autostart-Script eine laufende X-Session benötigt, verwende den unten beschriebenen **Alternativen Weg***
+
 Jetzt stellen wir ein, dass bei jedem Systemstart das Script `autorun.sh` in diesem Ordner ausgeführt wird.
 
 Bearbeite dazu die Datei `/etc/rc.local` indem du den folgenden Befehl ausführst:
@@ -45,3 +47,14 @@ chmod +x <dateiname>.sh
 ## 4. Autostart deaktivieren
 
 Um ein Programm wieder vom Autostart auszuschließen, entferne einfach die Zahl am Anfang oder verändere die Dateiendung, z.B. `line-follower.py` oder `01-line-follower.py_`.
+
+
+## Alternative zu rc.local
+
+Manche programme können erst gestartet werden, nachdem die grafische Oberfläche geladen wurde. In diesem Fall sollte das autorun-script nicht über rc.local gestartet werden, sondern über die LXDE-config (im Falle von Raspbian Pixel).
+
+Füge dazu einfach die folgende Zeile unten ans Ende der Datei `/home/pi/.config/lxsession/LXDE-pi/autostart`:
+
+```
+@bash /home/pi/autorun/autorun.sh
+```

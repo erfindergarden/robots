@@ -3,6 +3,7 @@ import time
 from pynput import mouse
 
 ROTATE_SPEED = .3
+MAX_SPEED = 1.0
 
 robot = gpiozero.CamJamKitRobot()
 speed = 0.0
@@ -19,7 +20,7 @@ def onClick(x, y, button, pressed):
 
 def onScroll(x, y, dx, dy):
 	global speed
-	speed = min([1, max([0, speed + float(dy)/100])])
+	speed = min([MAX_SPEED, max([-MAX_SPEED, speed + float(dy)/100])])
 	print 'new speed: %f' % speed
 
 # Register mouse events
@@ -30,7 +31,10 @@ try:
 	print 'Starting robot'
 	while True:
 		if direction is None:
-			robot.forward(speed)
+			if speed > 0:
+				robot.forward(speed)
+			else:
+				robot.backward(-speed)
 		elif direction == 'left':
 			robot.left(ROTATE_SPEED)
 		elif direction == 'right':
@@ -40,3 +44,5 @@ try:
 
 except KeyboardInterrupt:
 	robot.stop()
+	thread.stop()
+

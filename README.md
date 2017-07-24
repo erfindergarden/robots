@@ -16,7 +16,7 @@ Besonders gut geeignet sind Milchtüten oder auch Schukartons oder auch ein Gumm
 
 ### Github und Repo clonen
 
-Mache dir einen github account und clone dieses Repository. 
+Öffne dein Terminal auf dem pi und clone dieses Repository mit folgendem Kommando.
 
 ```
 git clone https://github.com/erfindergarden/Roboter-Workshop.git
@@ -62,12 +62,12 @@ Den Ultraschall Sensor programmieren wir ebenfalls zunächst mit Scratch 2.
 Den Line Following Sensor kannst du dann zu Hause programmieren. 
 
 
-### Einführung in GPIO Zero
+###  Roboter mit Python steuern
 
 Um dir den Einstieg in die Roboterprogrammierung zu vereinfachen gibt es die [gpiozero library](https://gpiozero.readthedocs.org/en/v1.1.0/). 
 
 
-#### Kontrollieren des CamJam #3 Kit Robot mit gpio zero
+###' Kontrollieren des CamJam #3 Kit Robot mit gpio zero
 
 Mittlerweile gibt es eine eigene Klasse für den CamJam Robot. Du musst so gar nicht mehr die Pins definieren. So kannst du etwa deinen Roboter Links fahren lassen. Öffne ein neues Program in geany und speichere es als .py Datei ab.
 
@@ -119,21 +119,17 @@ Wie Du dein Programm automatisch beim Hochfahren des Raspberrys starten kannst, 
 
 Zu Hause oder im wöchentlichen Pi Club kannst du weiter an deinem Roboter arbeiten. 
 
-###Ultraschallsensor
+### Ultraschallsensor
 Eine englische Anleitung findest du dazu `worksheets` 
 .
 
-###Line Follower Sensor
+### Line Follower Sensor
 Eine englische Anleitung findest du dazu `worksheets` 
 .
 
-###Feinjustierung der Motoren
+### Feinjustierung der Motoren
 Eine englische Anleitung findest du dazu `worksheets` 
 .
-
-### Fernsteuerung mit Blynk
-Hier findest du eine Anleitung, wie du den Roboter mit dem iphone/Android Blynk fernsteuern kannst: [smartphone_controller/README.md](smartphone_controller/)
-
 
 ## Download 
 * den ganzen order über "Download ZIP" rechts oben

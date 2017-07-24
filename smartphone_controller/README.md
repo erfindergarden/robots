@@ -1,79 +1,129 @@
-# Fernsteuerung mit Blynk
-[Blynk](http://www.blynk.cc/) ist eine Smartphone-App, mit der man User-Interfaces für Arduino, RasPi, etc. bauen kann. Hier eine kurze Anleitung, wie man damit den Roboter fernsteuern kann.
+# Pi Roboter Workshop
+
+[![Join the chat at https://gitter.im/erfindergarden/Roboter-Workshop](https://badges.gitter.im/erfindergarden/Roboter-Workshop.svg)](https://gitter.im/erfindergarden/Roboter-Workshop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+Hier findest du die Worksheets und den Programmcode vom [CamJam EduKit 3](http://camjam.me/?page_id=1035). 
+
+Unter `code` findest du code examples für jedes Board. 
 
 
-### 1. Blynk am Smartphone installieren
-1. Download für [iOS](https://itunes.apple.com/us/app/blynk-control-arduino-raspberry/id808760481?ls=1&mt=8) oder [Android](https://play.google.com/store/apps/details?id=cc.blynk)
-2. Registrieren / Anmelden
-3. "Create New Project"
-4. Bei "Hardware Model" **Raspberry Pi 2/A+/B+** auswählen
-4. *Auth-Token* notieren für später oder schicke dir eine E-mail mit dem *Auth-Token*
 
+## Kursinhalt
 
-### 2. Blynk auf dem RasPi einrichten
-**Der RasPi muss zur Installation von Blynk und zur Steuerung des Roboters mit dem Internet verbunden sein!**
+### Chassis bauen aus Müll
 
-Die ganze Anleitung findest du auch hier: [https://github.com/blynkkk/blynk-library/blob/master/linux/README.md](https://github.com/blynkkk/blynk-library/blob/master/linux/README.md)
+Besonders gut geeignet sind Milchtüten oder auch Schukartons oder auch ein Gummistiefel. Wir haben auch bereits Halterungen für Pringelsdosen entwickelt. 
 
-#### A. Voraussetzung: WiringPi installieren
+### Github und Repo clonen
 
-Update: bevor du WiringPi installierst solltest du noch folgende Commands ausführen.
+Mache dir einen github account und clone dieses Repository. 
 
 ```
-sudo apt-get install make
-sudo apt-get install build-essential
+git clone https://github.com/erfindergarden/Roboter-Workshop.git
 
 ```
 
-Dann kannst du WiringPi installieren.
+oder lade dir unser [Image](https://www.dropbox.com/s/eztebsx1mr978er/raspbian-erfinder-robot.img.zip?dl=0) herunter und brenne es mit der Software Etcher oder direkt mit deinem Pi und einem USB-SD Karten Adapter. 
 
-```bash
-git clone git://git.drogon.net/wiringPi
-cd wiringPi
-./build
-cd ..
+
+### Aufbau und Motortest
+In den PDFs im Ordner `worksheets` ist der Zusammenbau des Roboters und der Motortest beschrieben. 
+
+### Programmieren der Motoren mit Scratch 2
+
+Wir steuern erst die Motoren mit Scratch 2.
+
+### Ultraschall und Line Follower
+
+Den Ultraschall Sensor programmieren wir ebenfalls zunächst mit Scratch 2.
+
+Den Line Following Sensor kannst du dann zu Hause programmieren. 
+
+
+### Einführung in GPIO Zero
+
+Um dir den Einstieg in die Roboterprogrammierung zu vereinfachen gibt es die [gpiozero library](https://gpiozero.readthedocs.org/en/v1.1.0/). 
+
+
+#### Kontrollieren des CamJam #3 Kit Robot mit gpio zero
+
+Mittlerweile gibt es eine eigene Klasse für den CamJam Robot. Du musst so gar nicht mehr die Pins definieren. So kannst du etwa deinen Roboter Links fahren lassen. Öffne ein neues Program in geany und speichere es als .py Datei ab.
+
 ```
-Die ausführliche Anleitung gibt's auch nochmal hier: [http://wiringpi.com/download-and-install/](http://wiringpi.com/download-and-install/)
+from gpiozero import CamJamKitRobot
 
-#### B. Blynk kompilieren
+robot = CamJamKitRobot()
+robot.left()
 
-```bash
-cd ..
-git clone https://github.com/blynkkk/blynk-library.git
-cd blynk-library/linux
-make clean all target=raspberry
 ```
-
-#### C. Blynk starten
-Hier muss der vorher generierte *Auth-Token* eingesetzt werden, achte darauf, dass du dich nicht 
-
-```bash
-sudo ./blynk --token=AUTH-TOKEN
-```
+Folgende Kommandos stehen dir zur Verfügung:  
 
 
-### 3. Interface designen in Blynk
+> `robot.backward(speed=1)`
 
-1. Erstelle ein Interface mit vier Buttons und benenne sie LV, LH, RV, RH: Für jedes Rad zwei Buttons, einen für vorwärts, einen für rückwärts.
-2. Weise jedem Button den entsprechenen digital GPIO Pin nach der unten stehenden Tabelle zu
-3. Lass den 'Mode'-Schalter für jeden Button auf 'push'
-4. Drücke rechts oben den "Play"-Button
-5. Jetzt kannst du mit zwei Fingern deinen Roboter steuern
+Fahre den Roboter rückwärts indem du beide Motoren rückwarts drehen läßt.
+ 
+>  close()
 
-| Board | Links vorwärts | Links rückwärts | Rechts vorwärts | Rechts rückwärts |
-|-------|----------------|-----------------|-----------------|------------------------|
-| CamJam EduKit 3|gp8|gp7|gp10|gp9|
-| Ryanteck RPi Motor Controller | gp18 | gp17 | gp23 | gp22 |
-| Explorer Hat Pro | gp19 | gp20 | gp21 | gp26 |
+Shut down the device and release all associated resources.
+ 
+> robot.forward(speed=1)
+
+Fahre vorwärts indem du beide Motoren vorwärts drehen läßt. 
+ 
+>  robot.left(speed=1)
+
+Fahre eine enge Links Kurve indem du den rechten Motor vorwärts drehen läßt und den linken Motor rückwärts drehen läßt. 
+ 
+>  robot.reverse()
+
+Reverse the robot’s current motor directions. If the robot is currently running full speed forward, it will run full speed backward. If the robot is turning left at half-speed, it will turn right at half-speed. If the robot is currently stopped it will remain stoppe
+ 
+>  robot.right(speed=1)
+
+Fahre eine enge rechts Kurve indem du den linken Motor vorwärts und den rechten Motor rückwärts fahren läßt. 
+ 
+>  robot.stop() 
+ 
+Stoppe alle Motoren. 
+
+
+### Autostart Python Programm
+Wie Du dein Programm automatisch beim Hochfahren des Raspberrys starten kannst, steht in [dieser Anleitung](autorun/).
 
 
 
+##Extras
 
-![Screenshot 1](screenshot-1.png)
+Zu Hause oder im wöchentlichen Pi Club kannst du weiter an deinem Roboter arbeiten. 
 
-### 4. Teste ob deine Räder richtig rum fahren, wenn nicht vertausche einfach die Buttons
+###Ultraschallsensor
+Eine englische Anleitung findest du dazu `worksheets` 
+.
+
+###Line Follower Sensor
+Eine englische Anleitung findest du dazu `worksheets` 
+.
+
+###Feinjustierung der Motoren
+Eine englische Anleitung findest du dazu `worksheets` 
+.
+
+### Fernsteuerung mit Blynk
+Hier findest du eine Anleitung, wie du den Roboter mit dem iphone/Android Blynk fernsteuern kannst: [smartphone_controller/README.md](smartphone_controller/)
 
 
-### 5. Autostart blynk script
+## Download 
+* den ganzen order über "Download ZIP" rechts oben
+* Oder klicke auf RAW und copy paste den code in deinen geany editor, achte darauf, dass du alle Identications mitnimmst
+* Oder direkt über git, ein gutes Tutorial dazu findest du hier: [try.github.io](https://try.github.io)
+* ```git clone https://github.com/erfindergarden/Roboter-Workshop.git``` in deinem Terminal eingeben
 
-Mache dein blynk script autorun mit [dieser Anleitung](https://github.com/erfindergarden/Roboter-Workshop/blob/master/Autostart.md).
+##Lizenz
+
+Insofern nicht anders vermerkt alles in diesem Repository ist unter der Creative Commons Lizenz [CC-BY-SA 4.0] (http://creativecommons.org/licenses/by-sa/4.0/) lizensiert. 
+
+
+## Kontakt
+* Web: [www.erfindergarden.de](http://www.erfindergarden.de)
+* Email: [play@erfindergarden.de](mailto:play@erfindergarden.de)

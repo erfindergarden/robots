@@ -37,6 +37,24 @@ Wir steuern erst die Motoren mit Scratch 2.
 
 #### Einführung Scrach 1.4
 
+### Smart Phone Steuerung
+
+Scratch Code auf Desktop speichern
+
+VNC Viewer aktivieren
+
+Host Name zu robot ändern
+
+Neu Starten
+
+VNC Viewer App herunterladen (Android, Iphone)
+
+Mit Pi verbinden
+
+Scrach Code starten
+
+
+
 ### Ultraschall und Line Follower
 
 Den Ultraschall Sensor programmieren wir ebenfalls zunächst mit Scratch 2.

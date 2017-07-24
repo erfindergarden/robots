@@ -2,15 +2,17 @@
 
 [![Join the chat at https://gitter.im/erfindergarden/Roboter-Workshop](https://badges.gitter.im/erfindergarden/Roboter-Workshop.svg)](https://gitter.im/erfindergarden/Roboter-Workshop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Hier findest du die Worksheets und den Programmcode vom [CamJam EduKit 3](http://camjam.me/?page_id=1035). 
+Hier findest du die Worksheets und den Programmcode vom [CamJam EduKit 3] (http://camjam.me/?page_id=1035) und bald auch unseres Erfinder RobotHats. 
 
-Sollte das Cam Jam Kit ausverkauft sein verwenden wir auch ein Motor Board und ein Lasercut Chassis von Ryanteck. Eine Anleitung für den Zusammenbau findest [hier] (http://wiki.ryanteck.uk/RTK-000-003-Robot-Assembly). Der einzige Unterschied ist, dass die Motoren mit anderen Pins angesteuert werden. Python Code Examples findest du [hier] (https://github.com/RyanteckLTD/RTK-000-003/blob/master/basicPython/codeSamples/pythonBasis.py). Unter `code` findest du code examples für jedes Board. 
-
-Solltest du ein RaspiRobotBoard V2 oder V3 von Simon Monk haben dann findest du den code [hier] (https://github.com/simonmonk/raspirobotboard2/tree/master/python/examples) und die Anleitung zum Zusammenbau hier.
+Unter `code` findest du code mehr Beispiel Codes.
 
 
 
 ## Kursinhalt
+
+### Chassis bauen aus Müll
+
+Besonders gut geeignet sind Milchtüten oder auch Schukartons oder auch ein Gummistiefel. Wir haben auch bereits Halterungen für Pringelsdosen entwickelt. 
 
 ### Github und Repo clonen
 
@@ -21,32 +23,31 @@ git clone https://github.com/erfindergarden/Roboter-Workshop.git
 
 ```
 
-### Aufbau und Motortest
-In den PDFs im Ordner `worksheets` ist der Zusammenbau des Roboters und der Motortest beschrieben. Da wir als Distribution Kano verwenden, haben wir das erste Worksheet auf Deutsch neu geschrieben. 
+oder lade dir unser [Image](https://www.dropbox.com/s/eztebsx1mr978er/raspbian-erfinder-robot.img.zip?dl=0) herunter und brenne es mit der Software Etcher oder direkt mit deinem Pi und einem USB-SD Karten Adapter. 
+
+
+### Zusammenbau Chassis und Motoren
+In den PDFs im Ordner `worksheets` ist der Zusammenbau des Roboters und der Motortest beschrieben. 
+
+### Programmieren der Motoren mit Scratch 2
+
+Wir steuern erst die Motoren mit Scratch 2.
+
+#### Einführung Scratch 2
+
+#### Einführung Scrach 1.4
 
 ### Ultraschall und Line Follower
 
-Erst zeigen wir dir den Code ohne GPIO Zero.
+Den Ultraschall Sensor programmieren wir ebenfalls zunächst mit Scratch 2.
+
+Den Line Following Sensor kannst du dann zu Hause programmieren. 
 
 
 ### Einführung in GPIO Zero
 
 Um dir den Einstieg in die Roboterprogrammierung zu vereinfachen gibt es die [gpiozero library](https://gpiozero.readthedocs.org/en/v1.1.0/). 
 
-
-#### Installation 
-
-Mit diesen Kommandos kannst du pizero installieren. Ab Kano 3.0 ist gpio zero bereits vorinstalliert.
-
-```
-sudo apt-get install python-dev
-
-```
-
-``` 
-sudo pip install gpiozero
-
-```
 
 #### Kontrollieren des CamJam #3 Kit Robot mit gpio zero
 
@@ -95,9 +96,6 @@ Stoppe alle Motoren.
 Wie Du dein Programm automatisch beim Hochfahren des Raspberrys starten kannst, steht in [dieser Anleitung](autorun/).
 
 
-###Programmierung mit Scratch
-Nachdem wir das Python Sript geschrieben hast kannst du auch probieren die Programme in Scratch nachzubauen. 
-
 
 ##Extras
 
@@ -118,8 +116,6 @@ Eine englische Anleitung findest du dazu `worksheets`
 ### Fernsteuerung mit Blynk
 Hier findest du eine Anleitung, wie du den Roboter mit dem iphone/Android Blynk fernsteuern kannst: [smartphone_controller/README.md](smartphone_controller/)
 
-### eigenes Chassis
-In einem weiteren Workshop werden wir zusammen ein Chasis designen und 3D Drucken. Ein Beispiel findest du hier auf [thingiverse](http://www.thingiverse.com/thing:1113796/#files). 
 
 ## Download 
 * den ganzen order über "Download ZIP" rechts oben
